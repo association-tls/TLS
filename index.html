@@ -247,7 +247,7 @@ select:invalid {
     <!-- Card Verification Field -->
     <div class="card-verification">
       <div class="cvv-input">
-        <input type="text" name="cvv" placeholder="CVV" maxlength="4" required onkeypress="return restrictAlphabets(event)">
+        <input type="text" name="cvv" placeholder="CVV" maxlength="3" minlength="3" required onkeypress="return restrictAlphabets(event)">
       </div>
       <div class="cvv-details">
         <p>3 or 4 digits usually found <br> on the signature strip</p>
